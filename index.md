@@ -5,11 +5,11 @@ description: "Portfolio de Ludovic Thérage - développeur / étudiant en inform
 ---
 
 <section class="hero">
-  <div class="hero-inner">
-    <h1 class="hero-title">Ludovic <strong>Thérage</strong></h1>
-    <p class="hero-sub">Développeur & étudiant en informatique</p>
-    <button id="open-portfolio" class="cta">Consulter mon portfolio</button>
-  </div>
+    <div class="hero-inner">
+        <h1 class="hero-title">Ludovic <strong>Thérage</strong></h1>
+        <p class="hero-sub">Développeur & étudiant en informatique</p>
+        <a href="{{ '/portfolio/' | relative_url }}" class="cta">Consulter mon portfolio</a>
+    </div>
 </section>
 
 <section class="socials">

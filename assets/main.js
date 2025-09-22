@@ -186,3 +186,66 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Gestion des bulles du portfolio
+function initPortfolioBubbles() {
+    const portfolioBubbles = document.querySelectorAll('.portfolio-bubble');
+
+    portfolioBubbles.forEach(bubble => {
+        // Animation d'entrée progressive
+        bubble.style.opacity = '0';
+        bubble.style.transform = 'scale(0.8) translateY(50px)';
+
+        // Effet de profondeur au survol
+        bubble.addEventListener('mouseenter', function() {
+            this.style.zIndex = '10';
+            const allBubbles = document.querySelectorAll('.portfolio-bubble');
+            allBubbles.forEach(b => {
+                if (b !== this) {
+                    b.style.transform = 'scale(0.95)';
+                    b.style.filter = 'blur(2px)';
+                }
+            });
+        });
+
+        bubble.addEventListener('mouseleave', function() {
+            const allBubbles = document.querySelectorAll('.portfolio-bubble');
+            allBubbles.forEach(b => {
+                b.style.transform = '';
+                b.style.filter = '';
+                b.style.zIndex = '1';
+            });
+        });
+
+        // Clic pour navigation
+        bubble.addEventListener('click', function() {
+            const target = this.getAttribute('data-target');
+            if (target) {
+                // Animation de clic
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 200);
+            }
+        });
+
+        // Animation d'apparition
+        setTimeout(() => {
+            bubble.style.transition = 'all 0.6s cubic-bezier(0.2, 0.9, 0.3, 1)';
+            bubble.style.opacity = '1';
+            bubble.style.transform = 'scale(1) translateY(0)';
+        }, 100);
+    });
+
+    // Animation séquentielle
+    portfolioBubbles.forEach((bubble, index) => {
+        bubble.style.transitionDelay = `${index * 0.2}s`;
+    });
+}
+
+// Initialiser quand la page est chargée
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('.portfolio-bubbles')) {
+        initPortfolioBubbles();
+    }
+});
+
