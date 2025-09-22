@@ -1,19 +1,19 @@
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
 /usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
 creating Makefile
 
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
-make DESTDIR\= sitearchdir\=./.gem.20250920-19212-5ic9nf sitelibdir\=./.gem.20250920-19212-5ic9nf clean
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20250922-27050-9cog3i sitelibdir\=./.gem.20250922-27050-9cog3i clean
 
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
-make DESTDIR\= sitearchdir\=./.gem.20250920-19212-5ic9nf sitelibdir\=./.gem.20250920-19212-5ic9nf
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20250922-27050-9cog3i sitelibdir\=./.gem.20250922-27050-9cog3i
 compiling mapper.cpp
 compiling rubymain.cpp
 linking shared-object fastfilereaderext.so
 
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
-make DESTDIR\= sitearchdir\=./.gem.20250920-19212-5ic9nf sitelibdir\=./.gem.20250920-19212-5ic9nf install
-/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20250920-19212-5ic9nf
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20250922-27050-9cog3i sitelibdir\=./.gem.20250922-27050-9cog3i install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20250922-27050-9cog3i
 
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
-make DESTDIR\= sitearchdir\=./.gem.20250920-19212-5ic9nf sitelibdir\=./.gem.20250920-19212-5ic9nf clean
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20250922-27050-9cog3i sitelibdir\=./.gem.20250922-27050-9cog3i clean

@@ -1,19 +1,19 @@
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
 /usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
 creating Makefile
 
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20250920-19212-lsnsyg sitelibdir\=./.gem.20250920-19212-lsnsyg clean
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20250922-27050-u2pqme sitelibdir\=./.gem.20250922-27050-u2pqme clean
 
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20250920-19212-lsnsyg sitelibdir\=./.gem.20250920-19212-lsnsyg
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20250922-27050-u2pqme sitelibdir\=./.gem.20250922-27050-u2pqme
 compiling ruby_http_parser.c
 compiling ryah_http_parser.c
 linking shared-object ruby_http_parser.so
 
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20250920-19212-lsnsyg sitelibdir\=./.gem.20250920-19212-lsnsyg install
-/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20250920-19212-lsnsyg
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20250922-27050-u2pqme sitelibdir\=./.gem.20250922-27050-u2pqme install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20250922-27050-u2pqme
 
-current directory: /home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20250920-19212-lsnsyg sitelibdir\=./.gem.20250920-19212-lsnsyg clean
+current directory: /home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20250922-27050-u2pqme sitelibdir\=./.gem.20250922-27050-u2pqme clean

@@ -164,8 +164,8 @@ checked program was:
 /* end */
 
 LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I.  -Wdate-time -D_FORTIFY_SOURCE=3   -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.6 -fPIC  conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed      -lssl -lcrypto -lcrypto -lssl -lruby-3.2  -lssl -lcrypto -lcrypto -lssl -lm -lpthread  -lc"
-/usr/bin/ld : /tmp/ccbXre5Q.o : dans la fonction « t » :
-/home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/conftest.c:15:(.text+0xb) : référence indéfinie vers « rb_thread_blocking_region »
+/usr/bin/ld : /tmp/cc7iSaaA.o : dans la fonction « t » :
+/home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/conftest.c:15:(.text+0xb) : référence indéfinie vers « rb_thread_blocking_region »
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -328,8 +328,8 @@ checked program was:
 /* end */
 
 LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I.  -Wdate-time -D_FORTIFY_SOURCE=3   -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.6 -fPIC  conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed      -lssl -lcrypto -lcrypto -lssl -lruby-3.2  -lssl -lcrypto -lcrypto -lssl -lm -lpthread  -lc"
-/usr/bin/ld : /tmp/ccCPsumG.o : dans la fonction « t » :
-/home/ludovic/Téléchargements/portfolio_jekyll/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/conftest.c:15:(.text+0xb) : référence indéfinie vers « rb_enable_interrupt »
+/usr/bin/ld : /tmp/ccLnPqlq.o : dans la fonction « t » :
+/home/ludovic/Documents/Projets perso/Portfolio/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/conftest.c:15:(.text+0xb) : référence indéfinie vers « rb_enable_interrupt »
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
