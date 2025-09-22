@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mes projets</title>
+    <meta name="description" content="Portfolio de Ludovic Thérage - développeur / étudiant en informatique">
+    <link rel="icon" href="/assets/logo.svg">
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+<div id="canvas-wrap"><canvas id="bg-canvas"></canvas></div>
+
+<header class="site-header">
+    <nav class="nav">
+        <a href="/">Accueil</a>
+    </nav>
+    <!-- Bouton Dark/Light -->
+    <button id="theme-toggle" aria-label="Changer le thème"></button>
+</header>
+
+<main class="main">
+    <h1 id="projets">Projets</h1>
+
+<h2 id="taquin---javafx">Taquin - JavaFX</h2>
+<p>Application du jeu du Taquin implémentée en JavaFX avec gestion clavier/souris.</p>
+
+<h2 id="portfolio-jekyll">Portfolio Jekyll</h2>
+<p>Site statique optimisé et responsive (le projet actuel).</p>
+
+<h2 id="services-réseau">Services réseau</h2>
+<p>Expériences avec DHCP, DNS et routage pour travaux pratiques.</p>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; Ludovic Thérage - 2025. Tous droits réservés.</p>
+</footer>
+
+<!-- MODAL -->
+<div id="consent-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-inner">
+        <h3>Conditions d'utilisation</h3>
+        <p>J'accepte les conditions d'utilisation pour consulter le portfolio.</p>
+        <div class="modal-actions">
+            <button id="accept-btn">J'accepte</button>
+            <button id="decline-btn">Annuler</button>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/main.js"></script>
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light') {
+        root.setAttribute('data-theme', 'light');
+        toggleBtn.textContent = '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        if (root.getAttribute('data-theme') === 'light') {
+            root.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+            toggleBtn.textContent = '☀️';
+        } else {
+            root.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            toggleBtn.textContent = '🌙';
+        }
+    });
+
+    // Modal
+    const openBtn = document.getElementById("open-portfolio");
+    const modal = document.getElementById("consent-modal");
+    const acceptBtn = document.getElementById("accept-btn");
+    const declineBtn = document.getElementById("decline-btn");
+
+    openBtn && openBtn.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+    });
+
+    acceptBtn && acceptBtn.addEventListener("click", () => {
+        window.location.href = "/portfolio.html";
+    });
+
+    declineBtn && declineBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+</script>
+</body>
+</html>

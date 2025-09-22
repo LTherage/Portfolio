@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Logo Ludovic Therage">
+  <defs>
+    <filter id="blur"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  <rect width="160" height="160" rx="40" fill="#0f1113"/>
+  <g transform="translate(80,80)">
+    <circle r="60" fill="#ffffff" opacity="0.98" filter="url(#blur)"/>
+    <text x="0" y="6" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#0f1113">Ludovic</text>
+    <text x="0" y="28" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#0f1113">Thérage</text>
+  </g>
+</svg>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Accueil</title>
+    <meta name="description" content="Portfolio de Ludovic Thérage - développeur / étudiant en informatique">
+    <link rel="icon" href="/assets/logo.svg">
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+<div id="canvas-wrap"><canvas id="bg-canvas"></canvas></div>
+
+<header class="site-header">
+    <nav class="nav">
+        <a href="/">Accueil</a>
+    </nav>
+    <!-- Bouton Dark/Light -->
+    <button id="theme-toggle" aria-label="Changer le thème"></button>
+</header>
+
+<main class="main">
+    <section class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Ludovic <strong>Thérage</strong></h1>
+    <p class="hero-sub">Développeur &amp; étudiant en informatique</p>
+    <button id="open-portfolio" class="cta">Consulter mon portfolio</button>
+  </div>
+</section>
+
+<section class="socials">
+  <h2>Retrouvez-moi</h2>
+  <div class="cards-container">
+    <div class="card github" data-link="https://github.com/ton-pseudo">
+      <img src="/assets/github.svg" alt="GitHub" />
+      <h3>GitHub</h3>
+      <p>Mes projets open source et contributions.</p>
+    </div>
+
+    <div class="card linkedin" data-link="https://www.linkedin.com/in/ton-pseudo/">
+      <img src="/assets/linkedin.svg" alt="LinkedIn" />
+      <h3>LinkedIn</h3>
+      <p>Mon profil professionnel et mes expériences.</p>
+    </div>
+
+    <div class="card email" data-link="mailto:ton.email@example.com">
+      <img src="/assets/email.svg" alt="Email" />
+      <h3>Email</h3>
+      <p>Me contacter directement par mail.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; Ludovic Thérage - 2025. Tous droits réservés.</p>
+</footer>
+
+<!-- MODAL -->
+<div id="consent-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-inner">
+        <h3>Conditions d'utilisation</h3>
+        <p>J'accepte les conditions d'utilisation pour consulter le portfolio.</p>
+        <div class="modal-actions">
+            <button id="accept-btn">J'accepte</button>
+            <button id="decline-btn">Annuler</button>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/main.js"></script>
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light') {
+        root.setAttribute('data-theme', 'light');
+        toggleBtn.textContent = '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        if (root.getAttribute('data-theme') === 'light') {
+            root.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+            toggleBtn.textContent = '☀️';
+        } else {
+            root.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            toggleBtn.textContent = '🌙';
+        }
+    });
+
+    // Modal
+    const openBtn = document.getElementById("open-portfolio");
+    const modal = document.getElementById("consent-modal");
+    const acceptBtn = document.getElementById("accept-btn");
+    const declineBtn = document.getElementById("decline-btn");
+
+    openBtn && openBtn.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+    });
+
+    acceptBtn && acceptBtn.addEventListener("click", () => {
+        window.location.href = "/portfolio.html";
+    });
+
+    declineBtn && declineBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon Profil Dynamique</title>
+    <meta name="description" content="Portfolio de Ludovic Thérage - développeur / étudiant en informatique">
+    <link rel="icon" href="/assets/logo.svg">
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+<div id="canvas-wrap"><canvas id="bg-canvas"></canvas></div>
+
+<header class="site-header">
+    <nav class="nav">
+        <a href="/">Accueil</a>
+    </nav>
+    <!-- Bouton Dark/Light -->
+    <button id="theme-toggle" aria-label="Changer le thème"></button>
+</header>
+
+<main class="main">
+    <!-- ====== BIO ====== -->
+<section class="section fade profile-section">
+  <img src="/assets/profile.jpg" alt="Photo Ludovic Thérage" class="profile-pic" />
+  <h1>Ludovic Thérage</h1>
+  <p>Étudiant en informatique passionné par le développement, la cybersécurité et les projets open-source.</p>
+
+<h3>Compétences</h3>
+  <div class="skills">
+    <div class="skill">
+      <span>Java</span>
+      <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+    </div>
+    <div class="skill">
+      <span>JavaFX</span>
+      <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+    </div>
+    <div class="skill">
+      <span>Docker</span>
+      <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+    </div>
+    <div class="skill">
+      <span>Réseaux</span>
+      <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+    </div>
+    <div class="skill">
+      <span>Cybersécurité</span>
+      <div class="skill-bar"><div class="skill-fill" style="width: 65%;"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CV ====== -->
+<section class="section fade cv-section">
+  <h2>Mon CV</h2>
+  <a href="/assets/CV_Ludovic_Therage.pdf" class="cta" target="_blank">Télécharger mon CV</a>
+</section>
+
+<!-- ====== PROJETS ====== -->
+<section class="section fade projects-section">
+  <h2>Mes Projets</h2>
+  <div class="cards-container">
+    <!-- Projet 1 -->
+    <div class="card project-card">
+      <h3>Projet 1</h3>
+      <p class="short-desc">Description courte du projet.</p>
+      <div class="project-details hidden">
+        <p>Description complète du projet, fonctionnalités et technologies utilisées.</p>
+        <p>Technologies : Java, Docker</p>
+        <a href="https://github.com/ton-pseudo/projet1" target="_blank">Voir sur GitHub</a>
+      </div>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="card project-card">
+      <h3>Projet 2</h3>
+      <p class="short-desc">Description courte du projet.</p>
+      <div class="project-details hidden">
+        <p>Description complète du projet, fonctionnalités et technologies utilisées.</p>
+        <p>Technologies : JavaFX, Réseaux</p>
+        <a href="https://github.com/ton-pseudo/projet2" target="_blank">Voir sur GitHub</a>
+      </div>
+    </div>
+
+    <!-- Ajoute d'autres projets ici -->
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section class="section fade contact-section">
+  <h2>Contact</h2>
+  <ul>
+    <li>Email : <a href="mailto:ton.email@example.com">ton.email@example.com</a></li>
+    <li>LinkedIn : <a href="https://www.linkedin.com/in/ton-pseudo/" target="_blank">Mon profil LinkedIn</a></li>
+    <li>GitHub : <a href="https://github.com/ton-pseudo" target="_blank">Mes projets GitHub</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; Ludovic Thérage - 2025. Tous droits réservés.</p>
+</footer>
+
+<!-- MODAL -->
+<div id="consent-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-inner">
+        <h3>Conditions d'utilisation</h3>
+        <p>J'accepte les conditions d'utilisation pour consulter le portfolio.</p>
+        <div class="modal-actions">
+            <button id="accept-btn">J'accepte</button>
+            <button id="decline-btn">Annuler</button>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/main.js"></script>
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light') {
+        root.setAttribute('data-theme', 'light');
+        toggleBtn.textContent = '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        if (root.getAttribute('data-theme') === 'light') {
+            root.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+            toggleBtn.textContent = '☀️';
+        } else {
+            root.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            toggleBtn.textContent = '🌙';
+        }
+    });
+
+    // Modal
+    const openBtn = document.getElementById("open-portfolio");
+    const modal = document.getElementById("consent-modal");
+    const acceptBtn = document.getElementById("accept-btn");
+    const declineBtn = document.getElementById("decline-btn");
+
+    openBtn && openBtn.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+    });
+
+    acceptBtn && acceptBtn.addEventListener("click", () => {
+        window.location.href = "/portfolio.html";
+    });
+
+    declineBtn && declineBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+</script>
+</body>
+</html>

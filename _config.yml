@@ -1,0 +1,8 @@
+title: "Ludovic Thérage"
+email: "contact@example.com"
+description: "Portfolio de Ludovic Thérage - développeur / étudiant en informatique"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://example.com" # your site URL
+markdown: kramdown
+theme: minima
+plugins: []
