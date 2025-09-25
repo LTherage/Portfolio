@@ -4,222 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Mon portfolio de deuxième année">
-      <change beforePath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" beforeDir="false" />
+    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Ma version stable jekyll">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/cache/sassc-2.4.0.gem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/.gitmodules" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/CODE_OF_CONDUCT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/Rakefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/depend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/extconf.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/VERSION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/contrib/plugin.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/include/sass.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/include/sass/base.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/include/sass/context.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/include/sass/functions.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/include/sass/values.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/include/sass/version.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/include/sass2scss.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/MurmurHash2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast2c.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast2c.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_def_macros.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_fwd_decl.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_fwd_decl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_helpers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_sel_cmp.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_sel_super.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_sel_unify.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_sel_weave.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_selectors.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_selectors.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_supports.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_supports.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_values.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ast_values.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/b64/cencode.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/b64/encode.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/backtrace.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/backtrace.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/base64vlq.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/base64vlq.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/bind.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/bind.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/c2ast.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/c2ast.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/c99func.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/cencode.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/check_nesting.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/check_nesting.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/color_maps.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/color_maps.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/constants.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/constants.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/context.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/context.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/cssize.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/cssize.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/dart_helpers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/debug.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/debugger.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/emitter.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/emitter.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/environment.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/environment.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/error_handling.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/error_handling.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/eval.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/eval.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/eval_selectors.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/expand.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/expand.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/extender.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/extender.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/extension.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/extension.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/file.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/file.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_colors.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_colors.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_lists.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_lists.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_maps.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_maps.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_miscs.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_miscs.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_numbers.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_numbers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_selectors.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_selectors.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_strings.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_strings.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_utils.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/fn_utils.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/inspect.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/inspect.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/json.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/json.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/kwd_arg_macros.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/lexer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/lexer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/listize.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/listize.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/mapping.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/memory.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/memory/allocator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/memory/allocator.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/memory/config.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/memory/memory_pool.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/memory/shared_ptr.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/memory/shared_ptr.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/operation.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/operators.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/operators.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/ordered_map.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/output.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/output.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/parser.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/parser.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/parser_selectors.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/permutate.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/plugins.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/plugins.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/position.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/position.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/prelexer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/prelexer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/remove_placeholders.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/remove_placeholders.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/sass.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/sass.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/sass2scss.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/sass_context.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/sass_context.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/sass_functions.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/sass_functions.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/sass_values.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/sass_values.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/settings.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/source.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/source.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/source_data.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/source_map.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/source_map.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/stylesheet.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/stylesheet.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/to_value.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/to_value.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/units.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/units.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/utf8.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/utf8/checked.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/utf8/core.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/utf8/unchecked.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/utf8_string.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/utf8_string.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/util.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/util.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/util_string.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/util_string.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/values.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext/libsass/src/values.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/dependency.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/engine.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/error.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/functions_handler.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/import_handler.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/importer.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/native.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/native/native_context_api.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/native/native_functions_api.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/native/sass2scss_api.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/native/sass_input_style.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/native/sass_output_style.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/native/sass_value.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/native/string_list.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/sass_2_scss.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/functions.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value/bool.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value/color.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value/list.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value/map.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value/number.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value/string.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value_conversion.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value_conversion/base.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value_conversion/bool.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value_conversion/color.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value_conversion/list.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value_conversion/map.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value_conversion/number.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/script/value_conversion/string.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/util.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/util/normalized_map.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/lib/sassc/version.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/sassc.gemspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/test/custom_importer_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/test/engine_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/test/error_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/test/fixtures/paths.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/test/functions_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/test/native_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/test/output_style_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/test/sass_2_scss_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/test/test_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/3.2.0/specifications/sassc-2.4.0.gemspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/assets/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/portfolio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,26 +42,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.main.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ludovic/Documents/Projets perso/Portfolio",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.main.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ludovic/Documents/Projets perso/Portfolio&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_site/assets" />
@@ -322,7 +116,13 @@
       <workItem from="1758558070065" duration="3394000" />
       <workItem from="1758564997762" duration="17000" />
       <workItem from="1758565043940" duration="14000" />
-      <workItem from="1758565088439" duration="336000" />
+      <workItem from="1758565088439" duration="497000" />
+      <workItem from="1758609590053" duration="205000" />
+      <workItem from="1758703437598" duration="1952000" />
+      <workItem from="1758741572653" duration="6000" />
+      <workItem from="1758787524292" duration="2005000" />
+      <workItem from="1758800750999" duration="534000" />
+      <workItem from="1758814549926" duration="2384000" />
     </task>
     <task id="LOCAL-00001" summary="Mon portfolio de deuxième année">
       <option name="closed" value="true" />
@@ -332,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758559135353</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ma version stable jekyll">
+      <option name="closed" value="true" />
+      <created>1758565552074</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1758565552074</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +148,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Mon portfolio de deuxième année" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mon portfolio de deuxième année" />
+    <MESSAGE value="Ma version stable jekyll" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ma version stable jekyll" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -249,3 +249,102 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Animation au scroll
+document.addEventListener('DOMContentLoaded', function() {
+    // Observer pour les animations d'apparition
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observer les éléments à animer
+    document.querySelectorAll('.skill-category, .portfolio-bubble, .contact-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Smooth scroll pour la navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Animation d'apparition sauvage au scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        // Configuration de l'Intersection Observer
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+
+                    // Animation des enfants avec délai
+                    setTimeout(() => {
+                        const title = entry.target.querySelector('.section-title');
+                        if (title) title.style.opacity = '1';
+                        if (title) title.style.transform = 'translateY(0)';
+                    }, 300);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '-50px 0px -50px 0px'
+        });
+
+        // Observer toutes les sections sauf le hero
+        document.querySelectorAll('section:not(#hero)').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Animation des bulles d'arrière-plan (gardez votre code existant)
+        const canvas = document.getElementById('bubble-canvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            // ... votre code bubbles existant ...
+        }
+
+        // Smooth scroll pour la navigation
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Menu mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const nav = document.querySelector('.nav');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        }
+    });
+
+});
+

@@ -596,4 +596,87 @@ strong {
     .portfolio-bubble h2 {
         font-size: 1.5rem;
     }
+
+}
+
+/* Rendre les sections visibles par défaut */
+section {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    min-height: 100vh;
+    display: block !important;
+}
+
+/* Assurer la visibilité du contenu */
+.about-content, .skills-container, .projects-container, .contact-container {
+    opacity: 1 !important;
+}
+
+/* Hero minimaliste comme noaperu.fr */
+.minimal-hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: transparent;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 300;
+    opacity: 0.7;
+    margin-bottom: 3rem;
+}
+
+/* Indicateur de scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+.arrow {
+    width: 1px;
+    height: 30px;
+    background: currentColor;
+    margin: 0.5rem auto 0;
+    position: relative;
+}
+
+.arrow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid currentColor;
+}
+
+/* Sections avec espacement réduit */
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-align: center;
 }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludovic Thérage - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+
+
     <style>
         /* ===========================
            VARIABLES ET RESET
@@ -14,14 +18,21 @@
             --text-dark: #ffffff;
             --text-light: #111215;
             --accent: #6c63ff;
+            --accent-secondary: #ff6384;
             --radius: 20px;
             --transition: 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-light: rgba(0, 0, 0, 0.05);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -47,63 +58,281 @@
         }
 
         /* ===========================
-           HEADER
+           HEADER ET NAVIGATION
            =========================== */
-        .portfolio-header {
-            position: relative;
-            z-index: 10;
-            padding: 2rem;
-            text-align: center;
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
             background: rgba(15, 17, 19, 0.8);
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
         }
 
-        .portfolio-title {
-            font-size: clamp(2rem, 5vw, 4rem);
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav a:hover {
+            color: var(--accent);
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===========================
+           SECTIONS
+           =========================== */
+        section {
+            min-height: 100vh;
+            padding: 6rem 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
-            margin-bottom: 0.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
             background: linear-gradient(135deg, #fff 0%, #a8a8a8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .portfolio-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            margin-bottom: 2rem;
+        /* ===========================
+           HERO SECTION
+           =========================== */
+        #hero {
+            text-align: center;
+            position: relative;
         }
 
-        .back-btn {
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta {
             display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
+            padding: 0.8rem 1.8rem;
+            background: var(--accent);
             color: white;
             text-decoration: none;
+            border-radius: 50px;
             font-weight: 600;
             transition: var(--transition);
-            backdrop-filter: blur(10px);
+            border: 2px solid var(--accent);
         }
 
-        .back-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+        .cta:hover {
+            background: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         /* ===========================
-           CONTENEUR BULLES
+           ABOUT SECTION
            =========================== */
-        .bubble-container {
-            position: relative;
-            min-height: 100vh;
+        #about {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            max-width: 1200px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===========================
+           SKILLS SECTION
+           =========================== */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .skill-category {
+            background: var(--glass);
+            border-radius: var(--radius);
             padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-category h3 i {
+            color: var(--accent);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+
+        /* ===========================
+           PROJECTS SECTION
+           =========================== */
+        #projects {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .projects-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
             gap: 2rem;
-            perspective: 1000px;
+            max-width: 1400px;
+            width: 100%;
         }
 
         /* ===========================
@@ -216,6 +445,53 @@
         }
 
         /* ===========================
+           CONTACT SECTION
+           =========================== */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .contact-card {
+            background: var(--glass);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-card a:hover {
+            color: var(--accent);
+        }
+
+        /* ===========================
            MODAL DÉTAILS
            =========================== */
         .project-modal {
@@ -228,7 +504,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 100;
+            z-index: 1000;
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
@@ -281,12 +557,56 @@
         }
 
         /* ===========================
+           FOOTER
+           =========================== */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(15, 17, 19, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===========================
            RESPONSIVE
            =========================== */
+        @media (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-image {
+                max-width: 250px;
+            }
+        }
+
         @media (max-width: 768px) {
-            .bubble-container {
+            .site-header {
                 padding: 1rem;
-                gap: 1.5rem;
+            }
+
+            .nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(15, 17, 19, 0.95);
+                flex-direction: column;
+                padding: 1rem;
+                backdrop-filter: blur(10px);
+            }
+
+            .nav.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            section {
+                padding: 5rem 1rem 1rem;
             }
 
             .portfolio-bubble {
@@ -300,6 +620,10 @@
         }
 
         @media (max-width: 480px) {
+            .hero-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+            }
+
             .portfolio-bubble {
                 width: 220px;
                 height: 220px;
@@ -308,100 +632,313 @@
             .bubble-title {
                 font-size: 1.3rem;
             }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
         }
+
+        /* ===========================
+   ANIMATIONS SAUVAGES NOAPERU-STYLE
+   =========================== */
+
+        /* Masquer toutes les sections au départ */
+        section:not(#hero) {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
+        /* Animation d'apparition */
+        section.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Délais d'animation pour chaque section */
+        #about.reveal { transition-delay: 0.1s; }
+        #skills.reveal { transition-delay: 0.2s; }
+        #projects.reveal { transition-delay: 0.3s; }
+        #contact.reveal { transition-delay: 0.4s; }
+
+        /* Effet sur les éléments enfants pour un apparition échelonnée */
+        .reveal .section-title {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease 0.3s;
+        }
+
+        .reveal .about-content > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal .skill-category {
+            opacity: 0;
+            transform: translateY(40px) rotateX(10deg);
+            transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
+        .reveal .portfolio-bubble {
+            opacity: 0;
+            transform: translateY(50px) scale(0.8);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        }
+
+        /* Quand la section est révélée, animer les enfants */
+        .reveal .section-title,
+        .reveal .about-content > *,
+        .reveal .skill-category,
+        .reveal .portfolio-bubble {
+            opacity: 1;
+            transform: translateY(0) scale(1) rotateX(0);
+        }
+
+        /* Délais échelonnés pour les bulles */
+        .reveal .portfolio-bubble:nth-child(1) { transition-delay: 0.1s; }
+        .reveal .portfolio-bubble:nth-child(2) { transition-delay: 0.2s; }
+        .reveal .portfolio-bubble:nth-child(3) { transition-delay: 0.3s; }
+        .reveal .portfolio-bubble:nth-child(4) { transition-delay: 0.4s; }
+        .reveal .portfolio-bubble:nth-child(5) { transition-delay: 0.5s; }
+        .reveal .portfolio-bubble:nth-child(6) { transition-delay: 0.6s; }
+
+        /* Délais pour les compétences */
+        .reveal .skill-category:nth-child(1) { transition-delay: 0.1s; }
+        .reveal .skill-category:nth-child(2) { transition-delay: 0.2s; }
+        .reveal .skill-category:nth-child(3) { transition-delay: 0.3s; }
+        .reveal .skill-category:nth-child(4) { transition-delay: 0.4s; }
+
     </style>
 </head>
 <body>
 <!-- Canvas pour les bulles d'arrière-plan -->
 <canvas id="bubble-canvas"></canvas>
 
-<!-- En-tête du portfolio -->
-<header class="portfolio-header">
-    <h1 class="portfolio-title">Portfolio</h1>
-    <p class="portfolio-subtitle">Développeur & étudiant en informatique</p>
-    <a href="index.html" class="back-btn">← Retour à l'accueil</a>
+<!-- En-tête avec navigation -->
+<header class="site-header">
+    <a href="#" class="logo">Ludovic Thérage</a>
+    <nav class="nav">
+        <a href="#hero">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
 </header>
 
-<!-- Conteneur des bulles de projets -->
-<main class="bubble-container">
-    <!-- Projet 1 -->
-    <div class="portfolio-bubble bubble-1" data-project="1">
-        <div class="bubble-content">
-            <div class="bubble-icon">💻</div>
-            <h3 class="bubble-title">Application Web</h3>
-            <p class="bubble-desc">Plateforme de gestion de projets</p>
-            <div class="bubble-tech">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-            </div>
+<!-- Section Hero simplifiée -->
+<section id="hero" class="minimal-hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Ludovic Thérage</h1>
+        <h2 class="hero-subtitle">Développeur back-end junior</h2>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="arrow"></div>
         </div>
     </div>
+</section>
 
-    <!-- Projet 2 -->
-    <div class="portfolio-bubble bubble-2" data-project="2">
-        <div class="bubble-content">
-            <div class="bubble-icon">📱</div>
-            <h3 class="bubble-title">App Mobile</h3>
-            <p class="bubble-desc">Application de suivi fitness</p>
-            <div class="bubble-tech">
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">Firebase</span>
-            </div>
+<!-- Section À propos -->
+<section id="about">
+    <h2 class="section-title">À propos de moi</h2>
+    <div class="about-content">
+        <div class="profile-image">
+            <!-- Remplacez par votre photo -->
+            <img src="https://via.placeholder.com/300" alt="Ludovic Thérage">
+        </div>
+        <div class="about-text">
+            <p>
+                Je suis Ludovic Thérage, un développeur back-end junior passionné par la création
+                d'applications web performantes et évolutives. Actuellement étudiant en informatique
+                à l'IUT de Lens, je me spécialise dans les technologies back-end comme Node.js,
+                Python et les bases de données.
+            </p>
+            <p>
+                J'aime résoudre des problèmes complexes et apprendre de nouvelles technologies.
+                Mon objectif est de devenir un développeur full-stack compétent capable de créer
+                des solutions complètes et innovantes.
+            </p>
+            <p>
+                En dehors du code, je m'intéresse à la cybersécurité, à l'IA et aux nouvelles
+                tendances technologiques. Je suis toujours à la recherche de nouveaux défis
+                qui me permettront de progresser et d'élargir mes compétences.
+            </p>
+            <a href="#" class="cta" id="download-cv">Télécharger mon CV</a>
         </div>
     </div>
+</section>
 
-    <!-- Projet 3 -->
-    <div class="portfolio-bubble bubble-3" data-project="3">
-        <div class="bubble-content">
-            <div class="bubble-icon">🛒</div>
-            <h3 class="bubble-title">E-commerce</h3>
-            <p class="bubble-desc">Boutique en ligne moderne</p>
-            <div class="bubble-tech">
-                <span class="tech-tag">Vue.js</span>
-                <span class="tech-tag">Laravel</span>
+<!-- Section Compétences -->
+<section id="skills">
+    <h2 class="section-title">Mes compétences</h2>
+    <div class="skills-container">
+        <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Langages de programmation</h3>
+            <div class="skills-list">
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">Python</span>
+                <span class="skill-item">Java</span>
+                <span class="skill-item">PHP</span>
+                <span class="skill-item">C#</span>
+                <span class="skill-item">SQL</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-layer-group"></i> Frameworks & Bibliothèques</h3>
+            <div class="skills-list">
+                <span class="skill-item">Node.js</span>
+                <span class="skill-item">Express.js</span>
+                <span class="skill-item">React</span>
+                <span class="skill-item">Vue.js</span>
+                <span class="skill-item">Laravel</span>
+                <span class="skill-item">Django</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-database"></i> Bases de données</h3>
+            <div class="skills-list">
+                <span class="skill-item">MySQL</span>
+                <span class="skill-item">PostgreSQL</span>
+                <span class="skill-item">MongoDB</span>
+                <span class="skill-item">SQLite</span>
+                <span class="skill-item">Redis</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-tools"></i> Outils & Technologies</h3>
+            <div class="skills-list">
+                <span class="skill-item">Git</span>
+                <span class="skill-item">Docker</span>
+                <span class="skill-item">AWS</span>
+                <span class="skill-item">REST API</span>
+                <span class="skill-item">GraphQL</span>
+                <span class="skill-item">WebSocket</span>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Projet 4 -->
-    <div class="portfolio-bubble bubble-4" data-project="4">
-        <div class="bubble-content">
-            <div class="bubble-icon">🎮</div>
-            <h3 class="bubble-title">Jeu Web</h3>
-            <p class="bubble-desc">Jeu interactif en temps réel</p>
-            <div class="bubble-tech">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">WebSocket</span>
+<!-- Section Projets -->
+<section id="projects">
+    <h2 class="section-title">Mes projets</h2>
+    <div class="projects-container">
+        <!-- Projet 1 -->
+        <div class="portfolio-bubble bubble-1" data-project="1">
+            <div class="bubble-content">
+                <div class="bubble-icon">💻</div>
+                <h3 class="bubble-title">Application Web</h3>
+                <p class="bubble-desc">Plateforme de gestion de projets</p>
+                <div class="bubble-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Projet 5 -->
-    <div class="portfolio-bubble bubble-5" data-project="5">
-        <div class="bubble-content">
-            <div class="bubble-icon">📊</div>
-            <h3 class="bubble-title">Dashboard</h3>
-            <p class="bubble-desc">Tableau de bord analytique</p>
-            <div class="bubble-tech">
-                <span class="tech-tag">D3.js</span>
-                <span class="tech-tag">Python</span>
+        <!-- Projet 2 -->
+        <div class="portfolio-bubble bubble-2" data-project="2">
+            <div class="bubble-content">
+                <div class="bubble-icon">📱</div>
+                <h3 class="bubble-title">App Mobile</h3>
+                <p class="bubble-desc">Application de suivi fitness</p>
+                <div class="bubble-tech">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Firebase</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Projet 6 -->
-    <div class="portfolio-bubble bubble-6" data-project="6">
-        <div class="bubble-content">
-            <div class="bubble-icon">🤖</div>
-            <h3 class="bubble-title">IA Chatbot</h3>
-            <p class="bubble-desc">Assistant conversationnel intelligent</p>
-            <div class="bubble-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">TensorFlow</span>
+        <!-- Projet 3 -->
+        <div class="portfolio-bubble bubble-3" data-project="3">
+            <div class="bubble-content">
+                <div class="bubble-icon">🛒</div>
+                <h3 class="bubble-title">E-commerce</h3>
+                <p class="bubble-desc">Boutique en ligne moderne</p>
+                <div class="bubble-tech">
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">Laravel</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="portfolio-bubble bubble-4" data-project="4">
+            <div class="bubble-content">
+                <div class="bubble-icon">🎮</div>
+                <h3 class="bubble-title">Jeu Web</h3>
+                <p class="bubble-desc">Jeu interactif en temps réel</p>
+                <div class="bubble-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">WebSocket</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 5 -->
+        <div class="portfolio-bubble bubble-5" data-project="5">
+            <div class="bubble-content">
+                <div class="bubble-icon">📊</div>
+                <h3 class="bubble-title">Dashboard</h3>
+                <p class="bubble-desc">Tableau de bord analytique</p>
+                <div class="bubble-tech">
+                    <span class="tech-tag">D3.js</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 6 -->
+        <div class="portfolio-bubble bubble-6" data-project="6">
+            <div class="bubble-content">
+                <div class="bubble-icon">🤖</div>
+                <h3 class="bubble-title">IA Chatbot</h3>
+                <p class="bubble-desc">Assistant conversationnel intelligent</p>
+                <div class="bubble-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                </div>
             </div>
         </div>
     </div>
-</main>
+</section>
+
+<!-- Section Contact -->
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-container">
+        <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p><a href="mailto:ludovic.therage@example.com">ludovic.therage@example.com</a></p>
+        </div>
+        <div class="contact-card">
+            <i class="fab fa-linkedin"></i>
+            <h3>LinkedIn</h3>
+            <p><a href="https://linkedin.com/in/ludovic-therage" target="_blank">/in/ludovic-therage</a></p>
+        </div>
+        <div class="contact-card">
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/ludovic-therage" target="_blank">/ludovic-therage</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2023 Ludovic Thérage - Tous droits réservés</p>
+</footer>
 
 <!-- Modal pour les détails du projet -->
 <div class="project-modal" id="project-modal">
@@ -537,6 +1074,12 @@
 
         animate();
 
+        // Animation du sous-titre dynamique
+        const subtitle = document.getElementById('dynamic-subtitle');
+        setTimeout(() => {
+            subtitle.textContent = "Étudiant à l'IUT de Lens";
+        }, 3000);
+
         // Gestion des clics sur les bulles de projet
         const projectBubbles = document.querySelectorAll('.portfolio-bubble');
         const modal = document.getElementById('project-modal');
@@ -558,41 +1101,3 @@
                                 ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                             </div>
 
-                            <h3>Fonctionnalités principales</h3>
-                            <ul>
-                                ${project.features.map(feature => `<li>${feature}</li>`).join('')}
-                            </ul>
-
-                            <div class="project-links">
-                                <a href="${project.link}" class="project-link" target="_blank">Voir le projet</a>
-                                <a href="${project.github}" class="project-link" target="_blank">Code source</a>
-                            </div>
-                        `;
-
-                    modal.classList.add('active');
-                }
-            });
-        });
-
-        // Fermeture de la modal
-        closeModal.addEventListener('click', function() {
-            modal.classList.remove('active');
-        });
-
-        // Fermeture en cliquant à l'extérieur
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-
-        // Fermeture avec la touche Échap
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                modal.classList.remove('active');
-            }
-        });
-    });
-</script>
-</body>
-</html>
