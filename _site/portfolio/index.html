@@ -716,6 +716,34 @@
         .reveal .skill-category:nth-child(3) { transition-delay: 0.3s; }
         .reveal .skill-category:nth-child(4) { transition-delay: 0.4s; }
 
+
+        /* Effet de rebondissement pour plus de style "sauvage" */
+        @keyframes wildAppear {
+            0% {
+                opacity: 0;
+                transform: translateY(100px) scale(0.8) rotate(-5deg);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(-10px) scale(1.05) rotate(2deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1) rotate(0);
+            }
+        }
+
+        /* Appliquer l'animation wild aux sections */
+        section.reveal {
+            animation: wildAppear 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+        }
+
+        /* Variantes pour chaque section */
+        #about.reveal { animation-delay: 0.1s; }
+        #skills.reveal { animation-delay: 0.2s; }
+        #projects.reveal { animation-delay: 0.3s; }
+        #contact.reveal { animation-delay: 0.4s; }
+
     </style>
 </head>
 <body>
