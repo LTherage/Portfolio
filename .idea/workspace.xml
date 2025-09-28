@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Initialisation des raccourcis pour gitHub, LinkedIn et mon mail">
+    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Plusieurs changement dans mon portfolio : &#10; - Changement de l'accueil &#10; - Problème liées aux chemins des images/du CV patch &#10; - Utilisation des images ajax plus souvent &#10; &#10; Reste à patch : Première de couverture(Les cartes mal mises / logo du portfolio avec l'animation)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_layouts/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/pages/a-propos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/a-propos/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/pages/competences/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/competences/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/pages/projets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/projets/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/portfolio/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +49,7 @@
     "git-widget-placeholder": "main",
     "ignore_missing_gitignore": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ludovic/Documents/Projets perso/Portfolio/_site/assets",
+    "last_opened_file_path": "/home/ludovic/Documents/Projets perso/Portfolio/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,10 +61,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/_site/assets" />
       <recent name="$PROJECT_DIR$/_site/portfolio" />
       <recent name="$PROJECT_DIR$/_layouts" />
-      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/_site" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -127,7 +120,7 @@
       <workItem from="1758787524292" duration="2005000" />
       <workItem from="1758800750999" duration="534000" />
       <workItem from="1758814549926" duration="2948000" />
-      <workItem from="1759077407441" duration="8977000" />
+      <workItem from="1759077407441" duration="11734000" />
     </task>
     <task id="LOCAL-00001" summary="Mon portfolio de deuxième année">
       <option name="closed" value="true" />
@@ -185,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759081106041</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Plusieurs changement dans mon portfolio : &#10; - Changement de l'accueil &#10; - Problème liées aux chemins des images/du CV patch &#10; - Utilisation des images ajax plus souvent &#10; &#10; Reste à patch : Première de couverture(Les cartes mal mises / logo du portfolio avec l'animation)">
+      <option name="closed" value="true" />
+      <created>1759086776531</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759086776531</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +198,8 @@
     <MESSAGE value="Ma page portfolio en construction" />
     <MESSAGE value="Mise à jour de plusieurs fonctionnalités : &#10;- Layout avec animations dans le portfolio &#10;- Mise à jour de l'année du Copyright &#10;- Changement du nom redondant par LTherage portfolio &#10;- À propos plus visuelle avec le téléchargement du CV &#10;- Bulle aléatoire apparente" />
     <MESSAGE value="Initialisation des raccourcis pour gitHub, LinkedIn et mon mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialisation des raccourcis pour gitHub, LinkedIn et mon mail" />
+    <MESSAGE value="Plusieurs changement dans mon portfolio : &#10; - Changement de l'accueil &#10; - Problème liées aux chemins des images/du CV patch &#10; - Utilisation des images ajax plus souvent &#10; &#10; Reste à patch : Première de couverture(Les cartes mal mises / logo du portfolio avec l'animation)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plusieurs changement dans mon portfolio : &#10; - Changement de l'accueil &#10; - Problème liées aux chemins des images/du CV patch &#10; - Utilisation des images ajax plus souvent &#10; &#10; Reste à patch : Première de couverture(Les cartes mal mises / logo du portfolio avec l'animation)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
