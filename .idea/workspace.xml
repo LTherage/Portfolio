@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Ma page portfolio en construction">
+    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Mise à jour de plusieurs fonctionnalités : &#10;- Layout avec animations dans le portfolio &#10;- Mise à jour de l'année du Copyright &#10;- Changement du nom redondant par LTherage portfolio &#10;- À propos plus visuelle avec le téléchargement du CV &#10;- Bulle aléatoire apparente">
+      <change afterPath="$PROJECT_DIR$/_layouts/LudovicT.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_layouts/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/portfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/pages/a-propos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/a-propos/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/pages/competences/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/competences/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/pages/projets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/projets/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/portfolio/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,27 +44,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.main.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ludovic/Documents/Projets perso/Portfolio&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.main.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "main",
+    "ignore_missing_gitignore": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/ludovic/Documents/Projets perso/Portfolio/_site/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_site/assets" />
@@ -119,7 +125,7 @@
       <workItem from="1758787524292" duration="2005000" />
       <workItem from="1758800750999" duration="534000" />
       <workItem from="1758814549926" duration="2948000" />
-      <workItem from="1759077407441" duration="2104000" />
+      <workItem from="1759077407441" duration="3402000" />
     </task>
     <task id="LOCAL-00001" summary="Mon portfolio de deuxième année">
       <option name="closed" value="true" />
@@ -153,7 +159,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758817395736</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mise à jour de plusieurs fonctionnalités : &#10;- Layout avec animations dans le portfolio &#10;- Mise à jour de l'année du Copyright &#10;- Changement du nom redondant par LTherage portfolio &#10;- À propos plus visuelle avec le téléchargement du CV &#10;- Bulle aléatoire apparente">
+      <option name="closed" value="true" />
+      <created>1759079574848</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759079574848</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Mise à jour de plusieurs fonctionnalités : &#10;- Layout avec animations dans le portfolio &#10;- Mise à jour de l'année du Copyright &#10;- Changement du nom redondant par LTherage portfolio &#10;- À propos plus visuelle avec le téléchargement du CV &#10;- Bulle aléatoire apparente">
+      <option name="closed" value="true" />
+      <created>1759079586100</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759079586100</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +185,8 @@
     <MESSAGE value="Mon portfolio de deuxième année" />
     <MESSAGE value="Ma version stable jekyll" />
     <MESSAGE value="Ma page portfolio en construction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ma page portfolio en construction" />
+    <MESSAGE value="Mise à jour de plusieurs fonctionnalités : &#10;- Layout avec animations dans le portfolio &#10;- Mise à jour de l'année du Copyright &#10;- Changement du nom redondant par LTherage portfolio &#10;- À propos plus visuelle avec le téléchargement du CV &#10;- Bulle aléatoire apparente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour de plusieurs fonctionnalités : &#10;- Layout avec animations dans le portfolio &#10;- Mise à jour de l'année du Copyright &#10;- Changement du nom redondant par LTherage portfolio &#10;- À propos plus visuelle avec le téléchargement du CV &#10;- Bulle aléatoire apparente" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
