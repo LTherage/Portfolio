@@ -888,18 +888,27 @@
         <a href="#projects">Projets</a>
         <a href="#contact">Contact</a>
     </nav>
+    <button id="theme-toggle" aria-label="Changer le thème">🌞</button>
     <button class="mobile-menu-btn" id="mobile-menu-btn">
         <i class="fas fa-bars"></i>
     </button>
+
 </header>
 
-<!-- Section Hero simplifiée -->
+<!-- Section Hero accrocheuse -->
 <section id="hero" class="minimal-hero">
     <div class="hero-content">
-        <h1 class="hero-title">Ludovic Thérage</h1>
-        <h2 class="hero-subtitle">Développeur back-end junior</h2>
+        <h1 class="hero-title">
+            <span>Créativité &</span>
+            <span>Innovation</span>
+        </h1>
+        <h2 class="hero-subtitle">Développeur Back-End • Architecte de Solutions • Passionné de Tech</h2>
+        <div class="cta-buttons">
+            <a href="#projects" class="cta">Voir mes projets</a>
+            <a href="#contact" class="cta cta-secondary">Me contacter</a>
+        </div>
         <div class="scroll-indicator">
-            <span>Scroll</span>
+            <span>Découvrir</span>
             <div class="arrow"></div>
         </div>
     </div>
@@ -911,7 +920,7 @@
     <div class="about-content">
         <div class="profile-visual">
             <div class="profile-image">
-                <img src="LudovicT.png" alt="Ludovic Thérage">
+                <img src="{{ '/assets/LudovicT.png' | relative_url }}" alt="Ludovic Thérage">
             </div>
             <div class="stats-container">
                 <div class="stat">
@@ -935,34 +944,47 @@
             </p>
 
             <div class="tech-highlights">
-                <span class="tech-pill">🚀 Node.js</span>
-                <span class="tech-pill">🐍 Python</span>
-                <span class="tech-pill">🗄️ MongoDB</span>
-                <span class="tech-pill">⚡ Express.js</span>
+                <span class="tech-pill">
+                    <i class="fab fa-node-js"></i>
+                    Node.js
+                </span>
+                <span class="tech-pill">
+                    <i class="fab fa-python"></i>
+                    Python
+                </span>
+                <span class="tech-pill">
+                    <i class="fas fa-database"></i>
+                    MongoDB
+                </span>
+                <span class="tech-pill">
+                    <i class="fab fa-php"></i>
+                    PHP
+                </span>
             </div>
 
             <p>
                 Actuellement étudiant en informatique à l'IUT de Lens, je me consacre
                 à l'apprentissage des architectures back-end modernes et des bonnes pratiques
                 de développement.
+                Ce que j'aime faire pendant mon temps libre :
             </p>
 
             <div class="passion-list">
                 <div class="passion-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Cybersécurité</span>
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Apprentissage en autodidacte / Projets personnels</span>
                 </div>
                 <div class="passion-item">
-                    <i class="fas fa-brain"></i>
-                    <span>Intelligence Artificielle</span>
+                    <i class="fas fa-running"></i>
+                    <span> Sport </span>
                 </div>
                 <div class="passion-item">
-                    <i class="fas fa-rocket"></i>
-                    <span>Innovation Technologique</span>
+                    <i class="fas fa-chess-knight"></i>
+                    <span> Jeu de stratégie </span>
                 </div>
             </div>
 
-            <a href="#" class="cta" id="download-cv">
+            <a href="{{ '/assets/CV.pdf' | relative_url }}" class="cta" id="download-cv">
                 <i class="fas fa-download"></i>
                 Télécharger mon CV
             </a>
@@ -977,11 +999,11 @@
         <div class="skill-category">
             <h3><i class="fas fa-code"></i> Langages de programmation</h3>
             <div class="skills-list">
-                <span class="skill-item">JavaScript</span>
-                <span class="skill-item">Python</span>
                 <span class="skill-item">Java</span>
+                <span class="skill-item">Python</span>
                 <span class="skill-item">PHP</span>
-                <span class="skill-item">C#</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">C</span>
                 <span class="skill-item">SQL</span>
             </div>
         </div>
@@ -1015,6 +1037,27 @@
                 <span class="skill-item">REST API</span>
                 <span class="skill-item">GraphQL</span>
                 <span class="skill-item">WebSocket</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-users"></i> Soft-Skills & Méthodologies</h3>
+            <div class="skills-list">
+                <span class="skill-item">Travail d'équipe</span>
+                <span class="skill-item">Communication</span>
+                <span class="skill-item">Résolution de problèmes</span>
+                <span class="skill-item">Gestion de projet</span>
+                <span class="skill-item">Agile/Scrum</span>
+                <span class="skill-item">Adaptabilité</span>
+                <span class="skill-item">Curiosité intellectuelle</span>
+                <span class="skill-item">Autonomie</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-language"></i> Langues</h3>
+            <div class="skills-list">
+                <span class="skill-item">🇫🇷 Français - Natif</span>
+                <span class="skill-item">🇬🇧 Anglais - B2</span>
+                <span class="skill-item">🇪🇸 Espagnol - B1</span>
             </div>
         </div>
     </div>
@@ -1349,6 +1392,27 @@
 
         // Initialiser le scroll dynamique
         initWildScroll();
+    });
+
+    // Gestion du thème
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light') {
+        root.setAttribute('data-theme', 'light');
+        toggleBtn.textContent = '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        if (root.getAttribute('data-theme') === 'light') {
+            root.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+            toggleBtn.textContent = '☀️';
+        } else {
+            root.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            toggleBtn.textContent = '🌙';
+        }
     });
 </script>
 </body>

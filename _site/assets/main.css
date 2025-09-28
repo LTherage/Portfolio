@@ -680,3 +680,113 @@ section {
     margin-bottom: 3rem;
     text-align: center;
 }
+
+/* ===========================
+   HEADER ET NAVIGATION
+   =========================== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(15, 17, 19, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+/* Animation du logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-bold {
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.logo-portfolio {
+    margin-left: 0.3rem;
+    font-weight: 400;
+    color: #ffffff;
+    animation: portfolioColor 3s ease-in-out infinite;
+}
+
+/* ===========================
+   BOUTON THEME TOGGLE
+   =========================== */
+#theme-toggle {
+    background: var(--glass);
+    border: 2px solid rgba(255,255,255,0.1);
+    color: var(--text);
+    font-size: 20px;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 1rem;
+}
+
+#theme-toggle:hover {
+    transform: rotate(15deg) scale(1.1);
+    background: var(--panel);
+}
+
+:root[data-theme="light"] #theme-toggle {
+    border: 2px solid rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   HERO ACCROCHEUR
+   =========================== */
+.hero-content .hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hero-content .hero-title span {
+    display: block;
+}
+
+.hero-content .hero-title span:first-child {
+    background: linear-gradient(135deg, #fff 0%, #a8a8a8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content .hero-title span:last-child {
+    background: linear-gradient(135deg, #6c63ff 0%, #ff6384 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Adaptation mobile pour le header */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 1rem;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    #theme-toggle {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+}
