@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/main.css">
 
-
     <style>
         /* ===========================
            VARIABLES ET RESET
@@ -76,11 +75,45 @@
             transition: var(--transition);
         }
 
+        /* Animation du logo */
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--text-dark);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-bold {
+            font-weight: 900;
+            color: #ffffff;
+        }
+
+        .logo-portfolio {
+            margin-left: 0.3rem;
+            font-weight: 400;
+            color: #ffffff;
+            animation: portfolioColor 3s ease-in-out infinite;
+        }
+
+        @keyframes portfolioColor {
+            0%, 100% {
+                color: #ffffff;
+                font-weight: 400;
+            }
+            25% {
+                color: #8b5cf6;
+                font-weight: 600;
+            }
+            50% {
+                color: #a78bfa;
+                font-weight: 700;
+            }
+            75% {
+                color: #c4b5fd;
+                font-weight: 600;
+            }
         }
 
         .nav {
@@ -134,14 +167,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        section.show {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .section-title {
@@ -224,7 +249,7 @@
         }
 
         /* ===========================
-           ABOUT SECTION
+           ABOUT SECTION VISUELLE
            =========================== */
         #about {
             background: rgba(255, 255, 255, 0.02);
@@ -233,10 +258,16 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 3rem;
+            gap: 4rem;
             max-width: 1200px;
             width: 100%;
-            align-items: center;
+            align-items: start;
+        }
+
+        .profile-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
         .profile-image {
@@ -254,6 +285,32 @@
             display: block;
         }
 
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .stat {
+            text-align: center;
+            background: var(--glass);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
@@ -261,6 +318,63 @@
 
         .about-text p {
             margin-bottom: 1.5rem;
+        }
+
+        .tech-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .tech-pill {
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .tech-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+
+        .passion-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .passion-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--glass);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .passion-item:hover {
+            transform: translateX(10px);
+            background: rgba(108, 99, 255, 0.1);
+        }
+
+        .passion-item i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            width: 20px;
+        }
+
+        .about-text .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
         }
 
         /* ===========================
@@ -567,6 +681,105 @@
         }
 
         /* ===========================
+           ANIMATIONS SAUVAGES NOAPERU-STYLE
+           =========================== */
+
+        /* Masquer toutes les sections au départ */
+        section:not(#hero) {
+            opacity: 0;
+            transform: translateY(100px) scale(0.9);
+            transition: all 0s ease;
+        }
+
+        /* Animation d'apparition sauvage */
+        section.reveal {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            animation: wildAppear 1.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+        }
+
+        /* Animation sauvage avec rebond */
+        @keyframes wildAppear {
+            0% {
+                opacity: 0;
+                transform: translateY(100px) scale(0.8) rotate(-5deg);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(-15px) scale(1.05) rotate(2deg);
+            }
+            80% {
+                transform: translateY(5px) scale(0.98) rotate(-1deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1) rotate(0);
+            }
+        }
+
+        /* Animation pour le contenu des sections */
+        .reveal .section-title {
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+            animation: titlePop 0.8s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.3s forwards;
+        }
+
+        @keyframes titlePop {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+            }
+            70% {
+                transform: translateY(-10px) scale(1.02);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Animations échelonnées pour le contenu */
+        .reveal .about-content > *,
+        .reveal .skill-category,
+        .reveal .portfolio-bubble,
+        .reveal .contact-card {
+            opacity: 0;
+            transform: translateY(40px) scale(0.9);
+            animation: contentPop 0.8s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+        }
+
+        @keyframes contentPop {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Délais échelonnés */
+        .reveal .about-content > *:nth-child(1) { animation-delay: 0.4s; }
+        .reveal .about-content > *:nth-child(2) { animation-delay: 0.6s; }
+
+        .reveal .skill-category:nth-child(1) { animation-delay: 0.3s; }
+        .reveal .skill-category:nth-child(2) { animation-delay: 0.4s; }
+        .reveal .skill-category:nth-child(3) { animation-delay: 0.5s; }
+        .reveal .skill-category:nth-child(4) { animation-delay: 0.6s; }
+
+        .reveal .portfolio-bubble:nth-child(1) { animation-delay: 0.2s; }
+        .reveal .portfolio-bubble:nth-child(2) { animation-delay: 0.3s; }
+        .reveal .portfolio-bubble:nth-child(3) { animation-delay: 0.4s; }
+        .reveal .portfolio-bubble:nth-child(4) { animation-delay: 0.5s; }
+        .reveal .portfolio-bubble:nth-child(5) { animation-delay: 0.6s; }
+        .reveal .portfolio-bubble:nth-child(6) { animation-delay: 0.7s; }
+
+        .reveal .contact-card:nth-child(1) { animation-delay: 0.3s; }
+        .reveal .contact-card:nth-child(2) { animation-delay: 0.4s; }
+        .reveal .contact-card:nth-child(3) { animation-delay: 0.5s; }
+
+        /* ===========================
            RESPONSIVE
            =========================== */
         @media (max-width: 1024px) {
@@ -577,6 +790,14 @@
 
             .profile-image {
                 max-width: 250px;
+            }
+
+            .stats-container {
+                justify-content: center;
+            }
+
+            .passion-list {
+                align-items: center;
             }
         }
 
@@ -643,107 +864,11 @@
                 max-width: 250px;
                 text-align: center;
             }
-        }
 
-        /* ===========================
-   ANIMATIONS SAUVAGES NOAPERU-STYLE
-   =========================== */
-
-        /* Masquer toutes les sections au départ */
-        section:not(#hero) {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
-        }
-
-        /* Animation d'apparition */
-        section.reveal {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Délais d'animation pour chaque section */
-        #about.reveal { transition-delay: 0.1s; }
-        #skills.reveal { transition-delay: 0.2s; }
-        #projects.reveal { transition-delay: 0.3s; }
-        #contact.reveal { transition-delay: 0.4s; }
-
-        /* Effet sur les éléments enfants pour un apparition échelonnée */
-        .reveal .section-title {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease 0.3s;
-        }
-
-        .reveal .about-content > * {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .reveal .skill-category {
-            opacity: 0;
-            transform: translateY(40px) rotateX(10deg);
-            transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
-        }
-
-        .reveal .portfolio-bubble {
-            opacity: 0;
-            transform: translateY(50px) scale(0.8);
-            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.320, 1.275);
-        }
-
-        /* Quand la section est révélée, animer les enfants */
-        .reveal .section-title,
-        .reveal .about-content > *,
-        .reveal .skill-category,
-        .reveal .portfolio-bubble {
-            opacity: 1;
-            transform: translateY(0) scale(1) rotateX(0);
-        }
-
-        /* Délais échelonnés pour les bulles */
-        .reveal .portfolio-bubble:nth-child(1) { transition-delay: 0.1s; }
-        .reveal .portfolio-bubble:nth-child(2) { transition-delay: 0.2s; }
-        .reveal .portfolio-bubble:nth-child(3) { transition-delay: 0.3s; }
-        .reveal .portfolio-bubble:nth-child(4) { transition-delay: 0.4s; }
-        .reveal .portfolio-bubble:nth-child(5) { transition-delay: 0.5s; }
-        .reveal .portfolio-bubble:nth-child(6) { transition-delay: 0.6s; }
-
-        /* Délais pour les compétences */
-        .reveal .skill-category:nth-child(1) { transition-delay: 0.1s; }
-        .reveal .skill-category:nth-child(2) { transition-delay: 0.2s; }
-        .reveal .skill-category:nth-child(3) { transition-delay: 0.3s; }
-        .reveal .skill-category:nth-child(4) { transition-delay: 0.4s; }
-
-
-        /* Effet de rebondissement pour plus de style "sauvage" */
-        @keyframes wildAppear {
-            0% {
-                opacity: 0;
-                transform: translateY(100px) scale(0.8) rotate(-5deg);
-            }
-            60% {
-                opacity: 1;
-                transform: translateY(-10px) scale(1.05) rotate(2deg);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1) rotate(0);
+            .stats-container {
+                flex-direction: column;
             }
         }
-
-        /* Appliquer l'animation wild aux sections */
-        section.reveal {
-            animation: wildAppear 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
-        }
-
-        /* Variantes pour chaque section */
-        #about.reveal { animation-delay: 0.1s; }
-        #skills.reveal { animation-delay: 0.2s; }
-        #projects.reveal { animation-delay: 0.3s; }
-        #contact.reveal { animation-delay: 0.4s; }
-
     </style>
 </head>
 <body>
@@ -752,7 +877,10 @@
 
 <!-- En-tête avec navigation -->
 <header class="site-header">
-    <a href="#" class="logo">Ludovic Thérage</a>
+    <a href="#" class="logo">
+        <span class="logo-bold">LTherage</span>
+        <span class="logo-portfolio">portfolio</span>
+    </a>
     <nav class="nav">
         <a href="#hero">Accueil</a>
         <a href="#about">À propos</a>
@@ -777,32 +905,68 @@
     </div>
 </section>
 
-<!-- Section À propos -->
+<!-- Section À propos visuelle -->
 <section id="about">
     <h2 class="section-title">À propos de moi</h2>
     <div class="about-content">
-        <div class="profile-image">
-            <!-- Remplacez par votre photo -->
-            <img src="https://via.placeholder.com/300" alt="Ludovic Thérage">
+        <div class="profile-visual">
+            <div class="profile-image">
+                <!-- Remplacez par votre photo -->
+                <img src="https://via.placeholder.com/300" alt="Ludovic Thérage">
+            </div>
+            <div class="stats-container">
+                <div class="stat">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Années d'expérience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Projets réalisés</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Technologies maîtrisées</div>
+                </div>
+            </div>
         </div>
         <div class="about-text">
             <p>
-                Je suis Ludovic Thérage, un développeur back-end junior passionné par la création
-                d'applications web performantes et évolutives. Actuellement étudiant en informatique
-                à l'IUT de Lens, je me spécialise dans les technologies back-end comme Node.js,
-                Python et les bases de données.
+                <strong>Développeur back-end passionné</strong> spécialisé dans la création
+                d'applications web performantes et évolutives.
             </p>
+
+            <div class="tech-highlights">
+                <span class="tech-pill">🚀 Node.js</span>
+                <span class="tech-pill">🐍 Python</span>
+                <span class="tech-pill">🗄️ MongoDB</span>
+                <span class="tech-pill">⚡ Express.js</span>
+            </div>
+
             <p>
-                J'aime résoudre des problèmes complexes et apprendre de nouvelles technologies.
-                Mon objectif est de devenir un développeur full-stack compétent capable de créer
-                des solutions complètes et innovantes.
+                Actuellement étudiant en informatique à l'IUT de Lens, je me consacre
+                à l'apprentissage des architectures back-end modernes et des bonnes pratiques
+                de développement.
             </p>
-            <p>
-                En dehors du code, je m'intéresse à la cybersécurité, à l'IA et aux nouvelles
-                tendances technologiques. Je suis toujours à la recherche de nouveaux défis
-                qui me permettront de progresser et d'élargir mes compétences.
-            </p>
-            <a href="#" class="cta" id="download-cv">Télécharger mon CV</a>
+
+            <div class="passion-list">
+                <div class="passion-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Cybersécurité</span>
+                </div>
+                <div class="passion-item">
+                    <i class="fas fa-brain"></i>
+                    <span>Intelligence Artificielle</span>
+                </div>
+                <div class="passion-item">
+                    <i class="fas fa-rocket"></i>
+                    <span>Innovation Technologique</span>
+                </div>
+            </div>
+
+            <a href="#" class="cta" id="download-cv">
+                <i class="fas fa-download"></i>
+                Télécharger mon CV
+            </a>
         </div>
     </div>
 </section>
@@ -965,7 +1129,7 @@
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2023 Ludovic Thérage - Tous droits réservés</p>
+    <p>&copy; 2025 Ludovic Thérage - Tous droits réservés</p>
 </footer>
 
 <!-- Modal pour les détails du projet -->
@@ -1104,9 +1268,11 @@
 
         // Animation du sous-titre dynamique
         const subtitle = document.getElementById('dynamic-subtitle');
-        setTimeout(() => {
-            subtitle.textContent = "Étudiant à l'IUT de Lens";
-        }, 3000);
+        if (subtitle) {
+            setTimeout(() => {
+                subtitle.textContent = "Étudiant à l'IUT de Lens";
+            }, 3000);
+        }
 
         // Gestion des clics sur les bulles de projet
         const projectBubbles = document.querySelectorAll('.portfolio-bubble');
@@ -1121,11 +1287,70 @@
 
                 if (project) {
                     modalBody.innerHTML = `
-                            <h2>${project.title}</h2>
-                            <p>${project.description}</p>
+                        <h2>${project.title}</h2>
+                        <p>${project.description}</p>
+                        <h3>Technologies utilisées</h3>
+                        <div class="tech-tags">
+                            ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                        <h3>Fonctionnalités</h3>
+                        <ul>
+                            ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+                        </ul>
+                        <div class="modal-actions">
+                            <a href="${project.link}" class="cta" target="_blank">Voir le projet</a>
+                            <a href="${project.github}" class="cta cta-secondary" target="_blank">Code source</a>
+                        </div>
+                    `;
+                    modal.classList.add('active');
+                }
+            });
+        });
 
-                            <h3>Technologies utilisées</h3>
-                            <div class="tech-tags">
-                                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                            </div>
+        closeModal.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
 
+        // Fermer la modal en cliquant à l'extérieur
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Menu mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const nav = document.querySelector('.nav');
+
+        if (mobileMenuBtn && nav) {
+            mobileMenuBtn.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        }
+
+        // Scroll dynamique avec animations sauvages
+        function initWildScroll() {
+            const sections = document.querySelectorAll('section:not(#hero)');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        }
+
+        // Initialiser le scroll dynamique
+        initWildScroll();
+    });
+</script>
+</body>
+</html>
