@@ -869,6 +869,37 @@
                 flex-direction: column;
             }
         }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator .arrow {
+            width: 20px;
+            height: 20px;
+            border-right: 2px solid rgba(255, 255, 255, 0.7);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+            transform: rotate(45deg);
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            50% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -899,10 +930,10 @@
 <section id="hero" class="minimal-hero">
     <div class="hero-content">
         <h1 class="hero-title">
-            <span>Créativité &</span>
-            <span>Innovation</span>
+            <span>Prêt à relever de</span>
+            <span>nouveaux défis</span>
         </h1>
-        <h2 class="hero-subtitle">Développeur Back-End • Architecte de Solutions • Passionné de Tech</h2>
+        <h2 class="hero-subtitle"> Étudiant en recherche d'alternance • Curieux, motivé • Passionné de tech</h2>
         <div class="cta-buttons">
             <a href="#projects" class="cta">Voir mes projets</a>
             <a href="#contact" class="cta cta-secondary">Me contacter</a>
@@ -1152,7 +1183,7 @@
         <div class="contact-card">
             <i class="fas fa-envelope"></i>
             <h3>Email</h3>
-            <p><a href="mailto:ludovictherage2@gmail.com"> M'envoyer un mail </a></p>
+            <p><a href="mailto:ludovictherage2@gmail.com"> 📧 M'envoyer un mail </a></p>
         </div>
         <div class="contact-card">
             <i class="fab fa-linkedin"></i>
