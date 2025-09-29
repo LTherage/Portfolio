@@ -269,53 +269,6 @@ strong {
     border: 2px solid rgba(0,0,0,0.1);
 }
 
-/* ===========================
-   CARDS
-   =========================== */
-.cards-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-.card {
-    background: var(--panel);
-    border-radius: var(--radius);
-    padding: 20px;
-    width: clamp(250px, 30%, 350px);
-    height: 200px;
-    text-align: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s var(--transition), box-shadow 0.3s var(--transition), background 0.3s ease;
-}
-.card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 12px;
-}
-.card:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-}
-.card.expanded {
-    transform: scale(1.08);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-    z-index: 10;
-}
-
-/* Couleurs par carte */
-.card.github { background: #24292e; color: #fff; }
-.card.github:hover { background: #2f363d; }
-.card.linkedin { background: #0077b5; color: #fff; }
-.card.linkedin:hover { background: #0091d5; }
-.card.email { background: #6c63ff; color: #fff; }
-.card.email:hover { background: #847cff; }
-
 
 /* Sections avec fade-in */
 .profile-section, .cv-section, .learn-section, .contact-section {
