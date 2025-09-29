@@ -3,51 +3,341 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Accueil</title>
-    <meta name="description" content="Portfolio de Ludovic Thérage - développeur / étudiant en informatique">
+    <title>Ludovic Thérage - Portfolio</title>
+    <meta name="description" content="Portfolio de Ludovic Thérage - Développeur Back-End">
     <link rel="icon" href="/assets/logo.svg">
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* RESET COMPLET - Supprime tout style externe */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden !important;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #0f1113;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        #theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        #theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* Header */
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: rgba(15, 17, 19, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 100;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-bold {
+            font-weight: 900;
+        }
+
+        .logo-portfolio {
+            margin-left: 0.3rem;
+            font-weight: 400;
+            animation: portfolioColor 3s ease-in-out infinite;
+        }
+
+        @keyframes portfolioColor {
+            0%, 100% { color: #ffffff; }
+            25% { color: #8b5cf6; }
+            50% { color: #a78bfa; }
+            75% { color: #c4b5fd; }
+        }
+
+        /* Contenu principal - TOUT visible */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            gap: 3rem;
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Hero section - FORCÉ à être visible */
+        .hero-section {
+            text-align: center;
+            display: block;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fff 0%, #a8a8a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-title strong {
+            background: linear-gradient(135deg, #6c63ff 0%, #ff6384 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            color: #ffffff;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #6c63ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #6c63ff;
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(108, 99, 255, 0.4);
+        }
+
+        /* Contact section */
+        .contact-section {
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #6c63ff;
+        }
+
+        .contact-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .contact-card a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .contact-card a:hover {
+            color: #6c63ff;
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(15, 17, 19, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            position: relative;
+            z-index: 100;
+            flex-shrink: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 1rem;
+            }
+
+            .main-content {
+                padding: 1.5rem;
+                gap: 2rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 12vw, 4rem);
+            }
+
+            .contact-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 1rem;
+                gap: 1.5rem;
+            }
+
+            .hero-title {
+                font-size: clamp(2rem, 14vw, 3.5rem);
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .contact-card {
+                padding: 1.2rem;
+            }
+        }
+
+        /* Éviter tout débordement */
+        * {
+            max-height: 100vh;
+        }
+    </style>
 </head>
 <body>
-<div id="canvas-wrap"><canvas id="bg-canvas"></canvas></div>
-
+<!-- Header -->
 <header class="site-header">
-    <a href="#" class="logo">
+    <div class="logo">
         <span class="logo-bold">LTherage</span>
         <span class="logo-portfolio">portfolio</span>
-    </a>
-    <!-- Bouton Dark/Light -->
+    </div>
     <button id="theme-toggle" aria-label="Changer le thème">🌞</button>
 </header>
 
-<main class="main">
-    <section class="hero">
-        <div class="hero-inner">
-            <h1 class="hero-title">Ludovic <strong>Thérage</strong></h1>
-            <p class="hero-sub">Développeur &amp; étudiant en informatique</p>
-            <a href="/portfolio/" class="cta">Consulter mon portfolio</a>
+<!-- Contenu principal -->
+<main class="main-content">
+    <!-- Section Hero -->
+    <section class="hero-section">
+        <h1 class="hero-title">Ludovic <strong>Thérage</strong></h1>
+        <p class="hero-subtitle">Développeur Back-End • Étudiant en informatique</p>
+        <a href="/portfolio/" class="cta-button">Consulter mon portfolio</a>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:ludovictherage2@gmail.com">M'envoyer un mail</a></p>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/ludovic-th%C3%A9rage/" target="_blank">Voir mon profil</a></p>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/LTherage" target="_blank">Voir mon profil</a></p>
+            </div>
         </div>
     </section>
 </main>
 
-<footer class="footer">
+<!-- Footer -->
+<footer class="site-footer">
     <p>&copy; 2025 Ludovic Thérage - Tous droits réservés</p>
 </footer>
 
-<!-- MODAL -->
-<div id="consent-modal" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="modal-inner">
-        <h3>Conditions d'utilisation</h3>
-        <p>J'accepte les conditions d'utilisation pour consulter le portfolio.</p>
-        <div class="modal-actions">
-            <button id="accept-btn">J'accepte</button>
-            <button id="decline-btn">Annuler</button>
-        </div>
-    </div>
-</div>
-
-<script src="/assets/main.js"></script>
 <script>
+    // Gestion du thème
     const toggleBtn = document.getElementById('theme-toggle');
     const root = document.documentElement;
 
@@ -69,24 +359,20 @@
     });
 
 
-    const openBtn = document.getElementById("open-portfolio");
-    const modal = document.getElementById("consent-modal");
-    const acceptBtn = document.getElementById("accept-btn");
-    const declineBtn = document.getElementById("decline-btn");
+    document.addEventListener('wheel', function(e) {
+        e.preventDefault();
+    }, { passive: false });
 
-    openBtn && openBtn.addEventListener("click", () => {
-        modal.classList.remove("hidden");
+    document.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+
+    // Empêcher le scroll clavier
+    document.addEventListener('keydown', function(e) {
+        if ([32, 33, 34, 35, 36, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+        }
     });
-
-    acceptBtn && acceptBtn.addEventListener("click", () => {
-        window.location.href = "/portfolio.html";
-    });
-
-    declineBtn && declineBtn.addEventListener("click", () => {
-        modal.classList.add("hidden");
-    });
-
-
 </script>
 </body>
 </html>

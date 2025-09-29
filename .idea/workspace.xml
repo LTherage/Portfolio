@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Page du portfolio officiel (Refaire peut-être l'accueil en mieux)&#10; &#10; Reste à patch : Première de couverture(Les cartes mal mises / logo du portfolio avec l'animation)">
+    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Refonte des cartes sur default.html, car j'ai trouvé mieux">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910" beforeDir="false" afterPath="$PROJECT_DIR$/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/pages/a-propos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/a-propos/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/pages/competences/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/competences/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/pages/projets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/projets/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +128,7 @@
       <workItem from="1759077407441" duration="13324000" />
       <workItem from="1759127798998" duration="26000" />
       <workItem from="1759155636995" duration="958000" />
-      <workItem from="1759160425096" duration="5564000" />
+      <workItem from="1759160425096" duration="7766000" />
     </task>
     <task id="LOCAL-00001" summary="Mon portfolio de deuxième année">
       <option name="closed" value="true" />
@@ -215,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759168744454</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Refonte des cartes sur default.html, car j'ai trouvé mieux">
+      <option name="closed" value="true" />
+      <created>1759170198537</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1759170198537</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +241,8 @@
     <MESSAGE value="Plusieurs changement dans mon portfolio : &#10; - Changement de l'accueil &#10; - Problème liées aux chemins des images/du CV patch &#10; - Utilisation des images ajax plus souvent &#10; &#10; Reste à patch : Première de couverture(Les cartes mal mises / logo du portfolio avec l'animation)" />
     <MESSAGE value="Page du portfolio officiel &#10; &#10; Reste à patch : Première de couverture(Les cartes mal mises / logo du portfolio avec l'animation)" />
     <MESSAGE value="Page du portfolio officiel (Refaire peut-être l'accueil en mieux)&#10; &#10; Reste à patch : Première de couverture(Les cartes mal mises / logo du portfolio avec l'animation)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page du portfolio officiel (Refaire peut-être l'accueil en mieux)&#10; &#10; Reste à patch : Première de couverture(Les cartes mal mises / logo du portfolio avec l'animation)" />
+    <MESSAGE value="Refonte des cartes sur default.html, car j'ai trouvé mieux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refonte des cartes sur default.html, car j'ai trouvé mieux" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
