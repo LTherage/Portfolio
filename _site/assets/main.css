@@ -218,12 +218,13 @@ body {
 /* ===========================
    FOOTER
    =========================== */
-.footer {
-    padding: 18px 36px;
+footer {
     text-align: center;
-    color: var(--muted);
-    font-size: 14px;
+    padding: 2rem;
+    background: rgba(15, 17, 19, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 /* ===========================
    RESPONSIVE
@@ -788,5 +789,238 @@ section {
     #theme-toggle {
         margin-left: auto;
         margin-right: 1rem;
+    }
+}
+
+/* ===========================
+   ANIMATION DU LOGO (à ajouter dans la section HEADER)
+   =========================== */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-bold {
+    font-weight: 900;
+    color: var(--text);
+}
+
+.logo-portfolio {
+    margin-left: 0.3rem;
+    font-weight: 400;
+    color: var(--text);
+    animation: portfolioColor 3s ease-in-out infinite;
+}
+
+@keyframes portfolioColor {
+    0%, 100% {
+        color: var(--text);
+        font-weight: 400;
+    }
+    25% {
+        color: #8b5cf6;
+        font-weight: 600;
+    }
+    50% {
+        color: #a78bfa;
+        font-weight: 700;
+    }
+    75% {
+        color: #c4b5fd;
+        font-weight: 600;
+    }
+}
+
+/* ===========================
+   STYLES POUR DEFAULT.HTML - SANS SCROLL
+   =========================== */
+body.default-body {
+    overflow: hidden;
+}
+
+.main-default {
+    position: relative;
+    z-index: 5;
+    padding: 48px 36px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: calc(100vh - 140px);
+    overflow: hidden;
+}
+
+/* Cartes réseaux sociaux pour default.html */
+.cards-container-default {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    max-height: 40vh;
+    overflow: visible;
+}
+
+.card-default {
+    background: var(--panel);
+    border-radius: var(--radius);
+    padding: 25px 20px;
+    width: clamp(200px, 25%, 280px);
+    min-height: 160px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s var(--transition), box-shadow 0.3s var(--transition), background 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-default i {
+    margin-bottom: 12px;
+    font-size: 2.5rem;
+}
+
+.card-default h3 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.card-default p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.card-default:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Couleurs par carte pour default.html */
+.card-default.github { background: #24292e; color: #fff; }
+.card-default.github:hover { background: #2f363d; }
+.card-default.linkedin { background: #0077b5; color: #fff; }
+.card-default.linkedin:hover { background: #0091d5; }
+.card-default.email { background: #6c63ff; color: #fff; }
+.card-default.email:hover { background: #847cff; }
+
+/* ===========================
+   MODAL RGPD AMÉLIORÉE
+   =========================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(5px);
+}
+
+.modal-inner {
+    background: var(--panel);
+    padding: 22px;
+    border-radius: 12px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.modal button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background: var(--glass);
+    color: var(--text);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.modal button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* ===========================
+   RESPONSIVE POUR DEFAULT.HTML
+   =========================== */
+@media (max-width: 900px) {
+    .main-default {
+        padding: 30px 20px;
+        height: calc(100vh - 120px);
+        gap: 30px;
+    }
+
+    .cards-container-default {
+        gap: 15px;
+        max-height: 45vh;
+    }
+
+    .card-default {
+        width: clamp(150px, 45%, 200px);
+        min-height: 140px;
+        padding: 20px 15px;
+    }
+
+    .card-default i {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: clamp(24px, 8vw, 48px);
+    }
+
+    .hero-sub {
+        font-size: clamp(14px, 4vw, 16px);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-default {
+        padding: 20px 15px;
+        gap: 25px;
+    }
+
+    .cards-container-default {
+        flex-direction: column;
+        align-items: center;
+        max-height: 50vh;
+    }
+
+    .card-default {
+        width: 100%;
+        max-width: 250px;
+        min-height: 120px;
+        padding: 15px;
+    }
+
+    .card-default i {
+        font-size: 1.8rem;
+    }
+
+    .hero-title {
+        font-size: clamp(20px, 9vw, 36px);
+    }
+
+    .cta {
+        padding: 12px 18px;
+        font-size: 14px;
     }
 }
