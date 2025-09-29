@@ -1,8 +1,4 @@
-/* ===========================
-   THEME VARIABLES
-   =========================== */
 
-/* Dark mode par défaut */
 :root {
     --bg: #0f1113;
     --panel: #111215;
@@ -14,7 +10,7 @@
     --transition: 300ms cubic-bezier(.2,.9,.3,1);
 }
 
-/* Light mode */
+
 :root[data-theme="light"] {
     --bg: #f9f9fb;
     --panel: #ffffff;
@@ -24,9 +20,7 @@
     --glass: rgba(0,0,0,0.05);
 }
 
-/* ===========================
-   RESET & BASE
-   =========================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -45,9 +39,7 @@ body {
     min-height: 100vh;
 }
 
-/* ===========================
-   BACKGROUND CANVAS
-   =========================== */
+
 #canvas-wrap {
     position: fixed;
     inset: 0;
@@ -59,9 +51,7 @@ body {
     height: 100%;
 }
 
-/* ===========================
-   HEADER
-   =========================== */
+
 .site-header {
     position: relative;
     z-index: 5;
@@ -91,9 +81,7 @@ body {
     text-decoration: underline;
 }
 
-/* ===========================
-   MAIN
-   =========================== */
+
 .main {
     position: relative;
     z-index: 5;
@@ -104,9 +92,7 @@ body {
     gap: 40px;
 }
 
-/* ===========================
-   HERO
-   =========================== */
+
 .hero {
     display: flex;
     align-items: center;
@@ -143,9 +129,7 @@ body {
     box-shadow: 0 8px 30px rgba(0,0,0,0.6);
 }
 
-/* ===========================
-   CATEGORIES
-   =========================== */
+
 .categories {
     display: none;
 }
@@ -172,9 +156,7 @@ body {
     box-shadow: 0 18px 40px rgba(0,0,0,0.6);
 }
 
-/* ===========================
-   MODAL
-   =========================== */
+
 .modal {
     position: fixed;
     inset: 0;
@@ -215,9 +197,7 @@ body {
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
-/* ===========================
-   FOOTER
-   =========================== */
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -226,9 +206,7 @@ footer {
 }
 
 
-/* ===========================
-   RESPONSIVE
-   =========================== */
+
 @media (max-width:900px) {
     .nav { display: none; }
     .categories { flex-direction: column; padding: 0 12px; }
@@ -236,16 +214,12 @@ footer {
     .site-header { padding: 12px; }
 }
 
-/* ===========================
-   EMPHASIS
-   =========================== */
+
 strong {
     font-weight: 900;
 }
 
-/* ===========================
-   THEME TOGGLE BUTTON
-   =========================== */
+
 #theme-toggle {
     margin-left: 18px;
     background: var(--glass);
@@ -270,7 +244,7 @@ strong {
 }
 
 
-/* Sections avec fade-in */
+
 .profile-section, .cv-section, .learn-section, .contact-section {
     opacity: 0;
     transform: translateY(30px);
@@ -316,9 +290,7 @@ strong {
     transform: translateY(0);
 }
 
-/* ===========================
-   PORTFOLIO BUBBLES
-   =========================== */
+
 
 .portfolio-hero {
     text-align: center;
@@ -359,7 +331,7 @@ strong {
     perspective: 1000px;
 }
 
-/* Bulles de portfolio */
+
 .portfolio-bubble {
     position: relative;
     width: 300px;
@@ -435,7 +407,7 @@ strong {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Couleurs spécifiques pour chaque bulle */
+
 .bubble-competences {
     background: radial-gradient(circle at 30% 30%,
     rgba(108, 99, 255, 0.25),
@@ -463,7 +435,7 @@ strong {
             inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-/* Effets au survol */
+
 .portfolio-bubble:hover {
     transform: scale(1.1) rotate(3deg) !important;
     animation-play-state: paused;
@@ -487,13 +459,13 @@ strong {
             inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-/* Effet de profondeur au clic */
+
 .portfolio-bubble:active {
     transform: scale(1.05) rotate(1deg) !important;
     transition: transform 0.1s ease;
 }
 
-/* Light mode adaptations */
+
 :root[data-theme="light"] .portfolio-bubble {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -503,7 +475,7 @@ strong {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive */
+
 @media (max-width: 1100px) {
     .bubble-container {
         gap: 2rem;
@@ -553,7 +525,7 @@ strong {
 
 }
 
-/* Rendre les sections visibles par défaut */
+
 section {
     opacity: 1 !important;
     transform: translateY(0) !important;
@@ -561,12 +533,12 @@ section {
     display: block !important;
 }
 
-/* Assurer la visibilité du contenu */
+
 .about-content, .skills-container, .projects-container, .contact-container {
     opacity: 1 !important;
 }
 
-/* Hero minimaliste comme noaperu.fr */
+
 .minimal-hero {
     height: 100vh;
     display: flex;
@@ -590,7 +562,7 @@ section {
     margin-bottom: 3rem;
 }
 
-/* Indicateur de scroll */
+
 .scroll-indicator {
     position: absolute;
     bottom: 2rem;
@@ -621,7 +593,7 @@ section {
     border-top: 6px solid currentColor;
 }
 
-/* Sections avec espacement réduit */
+
 section {
     padding: 5rem 2rem;
     max-width: 1200px;
@@ -635,9 +607,7 @@ section {
     text-align: center;
 }
 
-/* ===========================
-   HEADER ET NAVIGATION
-   =========================== */
+
 .site-header {
     position: fixed;
     top: 0;
@@ -654,7 +624,7 @@ section {
     transition: var(--transition);
 }
 
-/* Animation du logo */
+
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
@@ -676,9 +646,7 @@ section {
     animation: portfolioColor 3s ease-in-out infinite;
 }
 
-/* ===========================
-   BOUTON THEME TOGGLE
-   =========================== */
+
 #theme-toggle {
     background: var(--glass);
     border: 2px solid rgba(255,255,255,0.1);
@@ -704,9 +672,7 @@ section {
     border: 2px solid rgba(0,0,0,0.1);
 }
 
-/* ===========================
-   HERO ACCROCHEUR
-   =========================== */
+
 .hero-content .hero-title {
     display: flex;
     flex-direction: column;
@@ -729,7 +695,7 @@ section {
     -webkit-text-fill-color: transparent;
 }
 
-/* Adaptation mobile pour le header */
+
 @media (max-width: 768px) {
     .site-header {
         padding: 1rem;
@@ -745,9 +711,7 @@ section {
     }
 }
 
-/* ===========================
-   ANIMATION DU LOGO (à ajouter dans la section HEADER)
-   =========================== */
+
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
@@ -788,9 +752,7 @@ section {
     }
 }
 
-/* ===========================
-   STYLES POUR DEFAULT.HTML - SANS SCROLL
-   =========================== */
+
 body.default-body {
     overflow: hidden;
 }
@@ -809,7 +771,7 @@ body.default-body {
     overflow: hidden;
 }
 
-/* Cartes réseaux sociaux pour default.html */
+
 .cards-container-default {
     display: flex;
     gap: 20px;
@@ -856,7 +818,7 @@ body.default-body {
     box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
-/* Couleurs par carte pour default.html */
+
 .card-default.github { background: #24292e; color: #fff; }
 .card-default.github:hover { background: #2f363d; }
 .card-default.linkedin { background: #0077b5; color: #fff; }
@@ -864,9 +826,7 @@ body.default-body {
 .card-default.email { background: #6c63ff; color: #fff; }
 .card-default.email:hover { background: #847cff; }
 
-/* ===========================
-   MODAL RGPD AMÉLIORÉE
-   =========================== */
+
 .modal {
     position: fixed;
     inset: 0;
@@ -911,9 +871,7 @@ body.default-body {
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
-/* ===========================
-   RESPONSIVE POUR DEFAULT.HTML
-   =========================== */
+
 @media (max-width: 900px) {
     .main-default {
         padding: 30px 20px;

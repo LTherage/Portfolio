@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Version demi-officiel">
+    <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Texte corrigé et centré">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910" beforeDir="false" afterPath="$PROJECT_DIR$/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_layouts/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/portfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/assets/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/portfolio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/pages/a-propos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/a-propos/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/pages/competences/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/competences/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/pages/projets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/projets/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +131,7 @@
       <workItem from="1759077407441" duration="13324000" />
       <workItem from="1759127798998" duration="26000" />
       <workItem from="1759155636995" duration="958000" />
-      <workItem from="1759160425096" duration="11296000" />
+      <workItem from="1759160425096" duration="12642000" />
     </task>
     <task id="LOCAL-00001" summary="Mon portfolio de deuxième année">
       <option name="closed" value="true" />
@@ -239,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759174790637</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Texte corrigé et centré">
+      <option name="closed" value="true" />
+      <created>1759175721501</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1759175721501</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +271,8 @@
     <MESSAGE value="Refonte des cartes sur default.html, car j'ai trouvé mieux" />
     <MESSAGE value="Patch de ma page de garde du portfolio : &#10;&#10;Tâche à faire : Même background que dans portfolio.html avec les bulles" />
     <MESSAGE value="Version demi-officiel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version demi-officiel" />
+    <MESSAGE value="Texte corrigé et centré" />
+    <option name="LAST_COMMIT_MESSAGE" value="Texte corrigé et centré" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

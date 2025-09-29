@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* RESET COMPLET - Supprime tout style externe */
+
         * {
             margin: 0;
             padding: 0;
@@ -56,7 +56,63 @@
         }
 
 
-        /* Header */
+        .rgpd-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 17, 19, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .rgpd-content {
+            flex: 1;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .rgpd-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .rgpd-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .rgpd-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .rgpd-btn.accept {
+            background: #6c63ff;
+            border-color: #6c63ff;
+        }
+
+        .rgpd-btn.accept:hover {
+            background: #5a52d5;
+        }
+
+        .rgpd-banner.hidden {
+            display: none;
+        }
+
+
         .site-header {
             display: flex;
             align-items: center;
@@ -95,7 +151,7 @@
             75% { color: #c4b5fd; }
         }
 
-        /* Contenu principal - TOUT visible */
+
         .main-content {
             flex: 1;
             display: flex;
@@ -109,7 +165,7 @@
             z-index: 10;
         }
 
-        /* Hero section - FORCÉ à être visible */
+
         .hero-section {
             text-align: center;
             display: block;
@@ -159,7 +215,7 @@
             box-shadow: 0 15px 40px rgba(108, 99, 255, 0.4);
         }
 
-        /* Contact section */
+
         .contact-section {
             width: 100%;
             max-width: 1000px;
@@ -215,7 +271,7 @@
             color: #6c63ff;
         }
 
-        /* Footer */
+
         .site-footer {
             text-align: center;
             padding: 1.5rem;
@@ -227,7 +283,6 @@
             flex-shrink: 0;
         }
 
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -239,7 +294,7 @@
             }
         }
 
-        /* Responsive */
+
         @media (max-width: 768px) {
             .site-header {
                 padding: 1rem;
@@ -262,6 +317,17 @@
             .contact-card {
                 padding: 1.5rem;
             }
+
+            .rgpd-banner {
+                padding: 1rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .rgpd-buttons {
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -282,15 +348,31 @@
             .contact-card {
                 padding: 1.2rem;
             }
+
+            .rgpd-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
         }
 
-        /* Éviter tout débordement */
+
         * {
             max-height: 100vh;
         }
     </style>
 </head>
 <body>
+<!-- Bandeau RGPD -->
+<div class="rgpd-banner" id="rgpdBanner">
+    <div class="rgpd-content">
+        🍪 Ce site utilise des cookies pour améliorer votre expérience. En continuant votre navigation, vous acceptez leur utilisation.
+    </div>
+    <div class="rgpd-buttons">
+        <button class="rgpd-btn" id="rgpdReject">Refuser</button>
+        <button class="rgpd-btn accept" id="rgpdAccept">Accepter</button>
+    </div>
+</div>
+
 <!-- Header -->
 <header class="site-header">
     <div class="logo">
@@ -337,7 +419,7 @@
 </footer>
 
 <script>
-    // Gestion du thème
+
     const toggleBtn = document.getElementById('theme-toggle');
     const root = document.documentElement;
 
@@ -359,6 +441,29 @@
     });
 
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const rgpdBanner = document.getElementById('rgpdBanner');
+        const rgpdAccept = document.getElementById('rgpdAccept');
+        const rgpdReject = document.getElementById('rgpdReject');
+
+
+        if (localStorage.getItem('rgpdConsent') === null) {
+            rgpdBanner.style.display = 'flex';
+        } else {
+            rgpdBanner.style.display = 'none';
+        }
+
+        rgpdAccept.addEventListener('click', function() {
+            localStorage.setItem('rgpdConsent', 'accepted');
+            rgpdBanner.style.display = 'none';
+        });
+
+        rgpdReject.addEventListener('click', function() {
+            localStorage.setItem('rgpdConsent', 'rejected');
+            rgpdBanner.style.display = 'none';
+        });
+    });
+
     document.addEventListener('wheel', function(e) {
         e.preventDefault();
     }, { passive: false });
@@ -367,7 +472,7 @@
         e.preventDefault();
     }, { passive: false });
 
-    // Empêcher le scroll clavier
+
     document.addEventListener('keydown', function(e) {
         if ([32, 33, 34, 35, 36, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
             e.preventDefault();

@@ -1,4 +1,4 @@
-// Background bubbles + interactions
+
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("bg-canvas");
     const ctx = canvas.getContext("2d");
@@ -39,14 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
             ctx.save();
             ctx.translate(this.x, this.y);
 
-            // Dégradé radial rond
+
             const grad = ctx.createRadialGradient(0, 0, this.size * 0.2, 0, 0, this.size);
             grad.addColorStop(0, "rgba(255,255,255,0.9)");
             grad.addColorStop(1, "rgba(255,255,255,0.05)");
 
             ctx.fillStyle = grad;
 
-            // Cercle parfait
+
             ctx.beginPath();
             ctx.arc(0, 0, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -60,24 +60,24 @@ document.addEventListener("DOMContentLoaded", () => {
     let heldBubble = null;
     let holdStart = 0;
 
-    // bulles initiales
+
     for (let i = 0; i < 20; i++) {
         particles.push(new Bubble(rand(0, w), rand(0, h), rand(20, 60), "bg"));
     }
 
-    // bulles aléatoires continues
+
     function spawnBackgroundBubble() {
         particles.push(new Bubble(rand(0, w), rand(0, h), rand(20, 60), "bg"));
     }
     setInterval(spawnBackgroundBubble, 1500);
 
-    // mini bulles du curseur
+
     window.addEventListener("mousemove", e => {
         particles.push(new Bubble(e.clientX, e.clientY, rand(4, 8), "trail"));
         if (particles.length > 200) particles.splice(0, particles.length - 150);
     });
 
-    // bulle maintenue (clic)
+
     window.addEventListener("mousedown", e => {
         holdStart = performance.now();
         heldBubble = new Bubble(e.clientX, e.clientY, 0, "held");
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         last = now;
         ctx.clearRect(0, 0, w, h);
 
-        // fond (tu peux remettre #0f1113 si besoin)
+
         ctx.fillStyle = "#202020";
         ctx.fillRect(0, 0, w, h);
 
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     loop(last);
 
-    // --- Ton code portfolio / modal existant ---
+
     document.querySelectorAll(".cat").forEach(c => {
         c.addEventListener("click", () => {
             const target = c.getAttribute("data-target");
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("keydown", e => { if (e.key === "Escape") hideModal(); });
 });
 
-// --- Cartes interactives ---
+
 document.querySelectorAll(".card").forEach(card => {
     card.addEventListener("click", () => {
         if (card.classList.contains("expanded")) {
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
             entry.target.classList.add("show");
-            observer.unobserve(entry.target); // chaque section apparaît une seule fois
+            observer.unobserve(entry.target);
         });
     }, appearOptions);
 
@@ -186,16 +186,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Gestion des bulles du portfolio
+
 function initPortfolioBubbles() {
     const portfolioBubbles = document.querySelectorAll('.portfolio-bubble');
 
     portfolioBubbles.forEach(bubble => {
-        // Animation d'entrée progressive
+
         bubble.style.opacity = '0';
         bubble.style.transform = 'scale(0.8) translateY(50px)';
 
-        // Effet de profondeur au survol
+
         bubble.addEventListener('mouseenter', function() {
             this.style.zIndex = '10';
             const allBubbles = document.querySelectorAll('.portfolio-bubble');
@@ -216,11 +216,11 @@ function initPortfolioBubbles() {
             });
         });
 
-        // Clic pour navigation
+
         bubble.addEventListener('click', function() {
             const target = this.getAttribute('data-target');
             if (target) {
-                // Animation de clic
+
                 this.style.transform = 'scale(0.95)';
                 setTimeout(() => {
                     window.location.href = target;
@@ -228,7 +228,7 @@ function initPortfolioBubbles() {
             }
         });
 
-        // Animation d'apparition
+
         setTimeout(() => {
             bubble.style.transition = 'all 0.6s cubic-bezier(0.2, 0.9, 0.3, 1)';
             bubble.style.opacity = '1';
@@ -236,22 +236,22 @@ function initPortfolioBubbles() {
         }, 100);
     });
 
-    // Animation séquentielle
+
     portfolioBubbles.forEach((bubble, index) => {
         bubble.style.transitionDelay = `${index * 0.2}s`;
     });
 }
 
-// Initialiser quand la page est chargée
+
 document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.portfolio-bubbles')) {
         initPortfolioBubbles();
     }
 });
 
-// Animation au scroll
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Observer pour les animations d'apparition
+
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observer les éléments à animer
+
     document.querySelectorAll('.skill-category, .portfolio-bubble, .contact-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Smooth scroll pour la navigation
+
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
