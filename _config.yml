@@ -1,8 +1,8 @@
 title: "Ludovic Thérage"
-email: "contact@example.com"
+email: "ludovictherage2@gmail.com"
 description: "Portfolio de Ludovic Thérage - développeur / étudiant en informatique"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # your site URL
+baseurl: "/Portfolio"   # nom exact du repo
+url: "https://ltherage.github.io"
 markdown: kramdown
 theme: minima
 plugins: []
