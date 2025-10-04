@@ -15,10 +15,10 @@
     <list default="true" id="1521dfaa-3072-4e0c-b563-a1bcf7317ad4" name="Changes" comment="Projet portfolio officiel fini dans la totalité : &#10;&#10;🔥🔥🔥🔥 WHOAOUH">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910" beforeDir="false" afterPath="$PROJECT_DIR$/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/portfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/portfolio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,8 @@
       <workItem from="1759220992309" duration="17000" />
       <workItem from="1759519514709" duration="1438000" />
       <workItem from="1759520985615" duration="4481000" />
-      <workItem from="1759526447708" duration="635000" />
+      <workItem from="1759526447708" duration="913000" />
+      <workItem from="1759580079426" duration="5251000" />
     </task>
     <task id="LOCAL-00001" summary="Mon portfolio de deuxième année">
       <option name="closed" value="true" />
@@ -319,7 +320,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759525222844</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Projet portfolio officiel fini dans la totalité : &#10;&#10;🔥🔥🔥🔥 WHOAOUH">
+      <option name="closed" value="true" />
+      <created>1759527166008</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1759527166008</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Projet portfolio officiel fini dans la totalité : &#10;&#10;🔥🔥🔥🔥 WHOAOUH">
+      <option name="closed" value="true" />
+      <created>1759527350041</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1759527350041</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +355,7 @@
     <MESSAGE value="Patch de ma page de garde du portfolio : &#10;&#10;Tâche à faire : Même background que dans portfolio.html avec les bulles" />
     <MESSAGE value="Version demi-officiel" />
     <MESSAGE value="Texte corrigé et centré" />
+    <MESSAGE value="Projet portfolio officiel fini dans la totalité : &#10;&#10; WHOAOUH" />
     <MESSAGE value="Projet portfolio officiel fini dans la totalité : &#10;&#10; WHOAOUH" />
     <MESSAGE value="Projet portfolio officiel fini dans la totalité : &#10;&#10; WHOAOUH" />
     <option name="LAST_COMMIT_MESSAGE" value="Projet portfolio officiel fini dans la totalité : &#10;&#10; WHOAOUH" />
