@@ -3,7 +3,6 @@
 <!-- HEADER STYLE: CLASSIC -->
 <div align="center">
 
-<img src="readmeai/assets/logos/rainbow.svg" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
 
 # PORTFOLIO
 
@@ -56,7 +55,7 @@
 
 ## Features
 
-<code>❯ REPLACE-ME</code>
+<code>❯ JavaScript, bundle exec jekyll serve, HTML et CSS </code>
 
 ---
 
